@@ -18,11 +18,7 @@ class CarWashStation:
         if self.distance_from_city_center == 0:
             return 0.0
 
-        price = (
-            car.comfort_class *
-            (self.clean_power - car.clean_mark) *
-            (self.average_rating / self.distance_from_city_center)
-        )
+        price = (car.comfort_class * (self.clean_power - car.clean_mark) * (self.average_rating / self.distance_from_city_center))
 
         return round(price, 1)
 
